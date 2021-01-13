@@ -6,7 +6,7 @@ s.waitForBoot({
 	OSCdef.freeAll;
 	OSCdef(\testOSCFunc,
 		{
-			|msg, time, addr, recvPort|;
+			|msg, time, addr, recvPort|
 			[msg, time, addr, recvPort].postln;
 
 			if(msg[2] > ~hiLux, {~hiLux = msg[2]; ("Highest Lux: " ++ ~hiLux).postln});
