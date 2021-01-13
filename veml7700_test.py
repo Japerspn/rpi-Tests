@@ -4,7 +4,7 @@ import busio
 import adafruit_veml7700
 
 i2c = busio.I2C(board.SCL, board.SDA)
-veml7700 = adafruit_veml.VEML7700(i2c)
+veml7700 = adafruit_veml7700.VEML7700(i2c)
 
 while True:
     print("Ambient light:", veml7700.light)
