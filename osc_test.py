@@ -1,5 +1,3 @@
-  GNU nano 3.2                                        oscTest.py
-
 import argparse
 import random
 import time
