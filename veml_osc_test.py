@@ -19,12 +19,6 @@ if __name__ == "__main__":
 
     client = udp_client.SimpleUDPClient(args.ip, args.port)
 
-    for x in range(10):
-        client.send_message("/test", random.random())
-        print("message sent")
-        time.sleep(1)
-
-
 
 while True:
     print("Ambient light:", veml7700.light)
