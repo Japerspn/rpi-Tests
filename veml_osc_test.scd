@@ -13,7 +13,7 @@ s.waitForBoot({
 			if(msg[2] < ~loLux, {~loLux = msg[2]; ("Lowest Lux: " ++ ~loLux).postln});
 
 		},
-		path: \test,
+		path: \veml7700,
 		recvPort: 5005);
 
 
