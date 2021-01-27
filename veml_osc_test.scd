@@ -16,7 +16,10 @@ s.waitForBoot({
 	// this funcion scales the lux values to be between 0 and 1
 	~scaledLux = {|val|(val - ~loLux) / (~hiLux - ~loLux)};
 
-	x = Synth(\vemlTest);
+	Task({
+		1.wait;
+		x = Synth(\vemlTest);
+	}).play;
 
 	OSCdef.freeAll;
 	OSCdef(\testOSCFunc,
