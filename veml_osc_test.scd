@@ -5,7 +5,7 @@ s.waitForBoot({
 		arg lux = 1;
 		var freq = 440, sig;
 
-		sig = SinOsc.ar(440 + SinOsc.ar(lux * 20, mul:10));
+		sig = SinOsc.ar(440 + SinOsc.ar(lux.lag(0.1) * 20, mul:10));
 		Out.ar(0, sig!2);
 	}).add;
 
