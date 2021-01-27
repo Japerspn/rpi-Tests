@@ -9,14 +9,14 @@ s.waitForBoot({
 		Out.ar(0, sig!2);
 	}).add;
 
-	x = Synth(\vemlTest);
+
 	//
 	~hiLux = 0;
 	~loLux = 100;
 	// this funcion scales the lux values to be between 0 and 1
 	~scaledLux = {|val|(val - ~loLux) / (~hiLux - ~loLux)};
 
-
+	x = Synth(\vemlTest);
 
 	OSCdef.freeAll;
 	OSCdef(\testOSCFunc,
@@ -41,6 +41,4 @@ s.waitForBoot({
 	//)
 });
 s.boot;
-
-
 
